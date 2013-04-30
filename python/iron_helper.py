@@ -1,11 +1,5 @@
 import sys, json
 
-payload_file = None
-payload = None
-
-config_file = None
-config = None
-
 class WorkerArgs:
     payload = None
     config = None
