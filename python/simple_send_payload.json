@@ -1,0 +1,18 @@
+{
+  "from": {
+    "address": "",
+    "name": ""
+  },
+  "reply_to": "",
+  "subject": "",
+  "body": {
+    "text": "",
+    "html": ""
+  },
+  "to": [
+    {
+      "address": "",
+      "name": ""
+    }
+  ]
+}
