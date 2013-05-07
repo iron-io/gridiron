@@ -1,0 +1,13 @@
+{
+  "sendgrid_username": "my sendgrid username",
+  "sendgrid_password": "my sendgrid pass",
+  "github_username": "my github username",
+  "github_password": "my github pass",
+  "from": {
+    "address": "sender@domain.com",
+    "name": "Sender's Name"
+  },
+  "branches": {
+    "username/repo": ["branch-to-monitor"]
+  }
+}
