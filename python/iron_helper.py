@@ -16,7 +16,7 @@ class WorkerArgs:
                         data = f.read()
                         if webhook:
                             data = urlparse.parse_qs(data)
-                            data = data["payload"]
+                            data = data["payload"][0]
                         self.payload = json.loads(data)
                 elif self.config is None and sys.argv[i] == "-config" and (i + 1) < len(sys.argv):
                     config_file = sys.argv[i+1]
