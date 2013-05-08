@@ -54,4 +54,4 @@ message.add_to(sender_email, sender_name)
 if reply_to is not None:
     message.set_replyto(reply_to)
 
-#s.web.send(message)
+s.web.send(message)
