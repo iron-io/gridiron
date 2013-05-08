@@ -2,7 +2,7 @@ from iron_helper import WorkerArgs
 from github import Github
 import sendgrid
 
-args = WorkerArgs()
+args = WorkerArgs(webhook=True)
 username = args.config["sendgrid_username"]
 password = args.config["sendgrid_password"]
 gh_un = args.config["github_username"]
