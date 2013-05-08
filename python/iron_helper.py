@@ -1,5 +1,5 @@
 import sys, json
-from urlparse import urlparse
+import urlparse
 
 class WorkerArgs:
     payload = None
