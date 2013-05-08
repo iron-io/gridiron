@@ -2,7 +2,7 @@ import sendgrid
 from iron_helper import WorkerArgs
 from markov import MarkovChain
 
-args = WorkerArgs()
+args = WorkerArgs(multipart=True)
 username = args.config["username"]
 password = args.config["password"]
 s = sendgrid.Sendgrid(username, password, secure=True)
@@ -20,9 +20,9 @@ if "reply_to" in args.config:
     reply_to = args.config["reply_to"]
 
 
-subject = args.payload["subject"]
-text_body = args.payload["text"]
-sender = args.payload["from"]
+subject = args.payload["subject"][0]
+text_body = args.payload["text"][0]
+sender = args.payload["from"][0]
 
 print "Sender: %s" % (sender,)
 print "Got text: %s" % (text_body,)
@@ -33,7 +33,7 @@ raw_table = f.read()
 f.close()
 
 chain.parse_table(raw_table)
-text_words = text_body.split(" ")
+text_words = [word.strip() for word in text_body.split(" ")]
 text_body = chain.generate_chain(length=len(text_words) + 1, words=text_words)
 
 print "New text: %s" % (text_body,)

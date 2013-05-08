@@ -1,5 +1,60 @@
-{
-  "from": "Paddy Foran <paddy@iron.io>",
-  "subject": "Markov test",
-  "text": "This is always"
-}
+--xYzZY
+Content-Disposition: form-data; name="headers"
+
+Received: by 127.0.0.1 with SMTP id aPkXYgbSBx Tue, 07 May 2013 23:02:40 -0500 (CDT)
+Received: from mail-we0-f170.google.com (mail-we0-f170.google.com [74.125.82.170]) by mx5.sendgrid.net (Postfix) with ESMTPS id B25EC2628C26 for <bot@markov.paddy.io>; Tue,  7 May 2013 23:02:39 -0500 (CDT)
+Received: by mail-we0-f170.google.com with SMTP id u54so1302284wes.15 for <bot@markov.paddy.io>; Tue, 07 May 2013 21:02:38 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20120113; h=x-received:mime-version:from:date:message-id:subject:to :content-type; bh=G9PFgltRu3ufS5IFlvgsmAeNZcU1IWtm+7mrcztYB38=; b=qxJkRWoXr0TpSpGrpaG8Gqsj8a35YrGSiczG4G8Cit5NN62vGe+ykJYePkwV0jXA5w 1edKOK1Fgb6BnXnfxNmmLVd0Ict4fYM+HKslYMur7/I/GFMSEgKHBGMY9JZMjcf7rwMc RrupJoscIVXmlUh3ZnqclTdbbKxRU+yjXMBRQNOssR6v/EcGfXFU7JAN01JysE/qWU9b GeNbwZ/vD6zEDmWbKQdQYALHkxWncMLPp942BtsrSzOhiQ8zw/s/Wk38AXCJWOXHPBhL uLelHj2K9/+osU4SzjgSmzl9vaPNGrg6bOgKCf+zKklXeKuofmV9XroGenJvU1JnSfgO E/1g==
+X-Received: by 10.194.178.162 with SMTP id cz2mr7478078wjc.27.1367985758627; Tue, 07 May 2013 21:02:38 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.216.146.136 with HTTP; Tue, 7 May 2013 21:01:57 -0700 (PDT)
+From: Paddy Foran <foran.paddy@gmail.com>
+Date: Wed, 8 May 2013 00:01:57 -0400
+Message-ID: <CAAE3iZoEsRSJphPPH0qHMNFHFw5rXynP=3MGqGTedmUzM=HFxA@mail.gmail.com>
+Subject: Markov bot test
+To: bot@markov.paddy.io
+Content-Type: multipart/alternative; boundary=089e013cc318336f7d04dc2d019b
+
+--xYzZY
+Content-Disposition: form-data; name="attachments"
+
+0
+--xYzZY
+Content-Disposition: form-data; name="dkim"
+
+{@gmail.com : pass}
+--xYzZY
+Content-Disposition: form-data; name="subject"
+
+Markov bot test
+--xYzZY
+Content-Disposition: form-data; name="to"
+
+bot@markov.paddy.io
+--xYzZY
+Content-Disposition: form-data; name="html"
+
+<div dir="ltr">This<br></div>
+
+--xYzZY
+Content-Disposition: form-data; name="from"
+
+Paddy Foran <foran.paddy@gmail.com>
+--xYzZY
+Content-Disposition: form-data; name="text"
+
+This
+
+--xYzZY
+Content-Disposition: form-data; name="envelope"
+
+{"to":["bot@markov.paddy.io"],"from":"foran.paddy@gmail.com"}
+--xYzZY
+Content-Disposition: form-data; name="charsets"
+
+{"to":"UTF-8","html":"UTF-8","subject":"UTF-8","from":"UTF-8","text":"UTF-8"}
+--xYzZY
+Content-Disposition: form-data; name="SPF"
+
+pass
+--xYzZY--
