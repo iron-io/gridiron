@@ -1,0 +1,6 @@
+runtime "python"
+exec "bot.py"
+file "iron_helper.py"
+file "markov.py"
+file "markov_source.json"
+pip "sendgrid"
