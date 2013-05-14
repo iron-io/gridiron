@@ -32,7 +32,7 @@ Once the dependencies are installed, you'll need three configuration files.
 
 	{
 	  "token": "Your private OAuth token",
-	  "project\_id": "Your project ID, obtained from https://hud.iron.io"
+	  "project_id": "Your project ID, obtained from https://hud.iron.io"
 	}
 
 ### Deploying
