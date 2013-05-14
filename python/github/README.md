@@ -1,6 +1,6 @@
 # GridIron
 
-GridIron is a collection of examples that showcase the benefits of [SendGrid](http://www.sendgrid.com) and [Iron.io](http://www.iron.io) together to deliver powerful and scalable email solutions.
+GridIron is a collection of examples that showcase the benefits of using [SendGrid](http://www.sendgrid.com) and [Iron.io](http://www.iron.io) together to deliver powerful and scalable email solutions.
 
 ## Github Notifications
 
@@ -12,7 +12,7 @@ The purpose of this example is to demonstrate how simple IronWorker's ability to
 
 The Github notification example is an extremely simple worker that exists mainly as glue between the Github API and SendGrid's web API. It has only a few dependencies:
 
-1. The `[iron_worker](http://dev.iron.io/worker/reference/cli/)` command line tool is used to deploy the worker to the IronWorker cloud. It can be installed using `gem install iron_worker_ng`
+1. The `iron_worker` [CLI](http://dev.iron.io/worker/reference/cli/) is used to deploy the worker to the IronWorker cloud. It can be installed using `gem install iron_worker_ng`
 2. The [PyGithub](http://pypi.python.org/pypi/PyGithub) Python module is used to interface with Github's API. It can be installed using `pip install PyGithub`
 3. The [SendGrid library](http://pypi.python.org/pypi/sendgrid) for Python is used to interface with SendGrid's Web API. It can be installed using `pip install sendgrid`
 
@@ -30,12 +30,10 @@ Once the dependencies are installed, you'll need three configuration files.
 
 `iron.json` is a configuration file for the `iron_worker` CLI. It should contain the project ID and token you want to use as authentication credentials with Iron.io. You can download your `iron.json` file from [the HUD](https://hud.iron.io) or you can check [the documentation](http://dev.iron.io/worker/reference/configuration) for more information about the format. A minimal configuration file looks like this:
 
-{% highlight json %}
-{
-  "token": "Your private OAuth token",
-  "project\_id": "Your project ID, obtained from https://hud.iron.io"
-}
-{% endhighlight %}
+	{
+	  "token": "Your private OAuth token",
+	  "project\_id": "Your project ID, obtained from https://hud.iron.io"
+	}
 
 ### Deploying
 
