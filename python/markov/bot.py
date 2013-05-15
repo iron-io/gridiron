@@ -21,11 +21,15 @@ if "reply_to" in args.config:
 
 
 subject = args.payload["subject"][0]
+if subject.strip() == "":
+    subject = "[no subject]"
 text_body = args.payload["text"][0]
+text_in = text_body.split("\n")[0]
 sender = args.payload["from"][0]
 
 print "Sender: %s" % (sender,)
 print "Got text: %s" % (text_body,)
+print "Using text: %s" % (text_in,)
 
 chain = MarkovChain()
 f = open("markov_source.json")
@@ -33,16 +37,16 @@ raw_table = f.read()
 f.close()
 
 chain.parse_table(raw_table)
-text_words = [word.strip() for word in text_body.split(" ")]
-text_body = chain.generate_chain(length=len(text_words) + 1, words=text_words)
+text_words = [word.strip() for word in text_in.split(" ")]
+text_in = chain.generate_chain(length=len(text_words) + 1, words=text_words)
 
-print "New text: %s" % (text_body,)
+print "New text: %s" % (text_in,)
 
 from_param = from_address
 if from_name is not None:
     from_param = (from_address, from_name)
 
-message = sendgrid.Message(from_param, subject, text_body)
+message = sendgrid.Message(from_param, subject, text_in)
 
 sender_name = None
 sender_email = sender

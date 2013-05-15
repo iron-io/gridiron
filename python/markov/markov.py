@@ -39,9 +39,25 @@ class MarkovChain:
             # pick a random word to start the chain
             words.append(random.choice(table.keys()))
 
+        replaced_chars = {
+                "\n": " ",
+                "\r": "",
+                ";": "",
+                ".": "",
+                ",": "",
+                "!": "",
+                "?": "",
+                '"': ""
+        }
+        new_words = " ".join(words)
+        for c in replaced_chars:
+            new_words = new_words.replace(c, replaced_chars[c])
+
+        new_words = new_words.split(" ")
+
         while len(words) < length:
-            last_idx = len(words)-1
-            last_word = words[last_idx]
+            last_idx = len(new_words)-1
+            last_word = new_words[last_idx]
 
             try:
                 entries = table[last_word]
