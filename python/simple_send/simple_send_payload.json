@@ -7,7 +7,7 @@
   "subject": "Testing GridIron",
   "body": {
     "text": "GridIron is a collaboration between Iron.io and SendGrid.",
-    "html": "<a href=\"https://github.com/paddyforan/gridiron\">GridIron</a> is a collaboration between <a href=\"http://www.iron.io\">Iron.io</a> and <a href=\"http://www.sendgrid.com\">SendGrid</a>."
+    "html": "<a href=\"https://github.com/iron-io/gridiron\">GridIron</a> is a collaboration between <a href=\"http://www.iron.io\">Iron.io</a> and <a href=\"http://www.sendgrid.com\">SendGrid</a>."
   },
   "to": [
     {
