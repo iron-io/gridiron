@@ -1,0 +1,5 @@
+{
+  "username": "your sendgrid username",
+  "password": "your sendgrid password",
+  "queue": "to_be_mailed"
+}

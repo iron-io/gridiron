@@ -1,0 +1,6 @@
+runtime "python"
+exec "pull_queue_send.py"
+file "iron_helper.py"
+file "iron.json"
+pip "sendgrid"
+pip "iron-mq"

@@ -8,6 +8,10 @@ GridIron is a selection of demos that are meant to show the possibilities of com
 
 The simplest possible example, sending email using SendGrid&apos;s API from within an IronWorker worker. The sendGrid authentication information is read from the configuration file and the email information (subject, recipients, sender, etc.) are read from the payload.
 
+### [Queue-Based Emailing](../../tree/master/python/pull_queue)
+
+An example that shows how to read email information off a queue, and use variable numbers of workers to process that queue to send email at different rates. An evolution of the Hello, SendGrid example that offers more control over how your data is processed and is more robust.
+
 ### [Fanout](../../tree/master/python/push_queue)
 
 IronMQ push queues can be used to send emails. With their support for multicast, they can be used as powerful brokers. In this example, our message is sent using the Hello, SendGrid example above, but it is also sent as a text message, using Twilio.

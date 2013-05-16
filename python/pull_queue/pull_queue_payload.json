@@ -1,0 +1,18 @@
+{
+  "from": {
+    "address": "paddy@iron.io",
+    "name": "Paddy Foran"
+  },
+  "reply_to": "paddy+reply@iron.io",
+  "subject": "Testing GridIron",
+  "body": {
+    "text": "GridIron is a collaboration between Iron.io and SendGrid.",
+    "html": "<a href=\"https://github.com/iron-io/gridiron\">GridIron</a> is a collaboration between <a href=\"http://www.iron.io\">Iron.io</a> and <a href=\"http://www.sendgrid.com\">SendGrid</a>."
+  },
+  "to": [
+    {
+      "address": "foran.paddy@gmail.com",
+      "name": "Paddy's Personal Account"
+    }
+  ]
+}
