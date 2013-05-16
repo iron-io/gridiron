@@ -4,18 +4,18 @@ GridIron is a selection of demos that are meant to show the possibilities of com
 
 ## Examples
 
-### Simple Sending
+### [Hello, SendGrid](./simple_send)
 
 The simplest possible example, sending email using SendGrid&apos;s API from within an IronWorker worker. The sendGrid authentication information is read from the configuration file and the email information (subject, recipients, sender, etc.) are read from the payload.
 
-### Push Queue Sending
+### [Fanout](./push_queue)
 
-IronMQ push queues can be used to send emails. With their support for multicast, they can be used as powerful brokers. In this example, our message is sent using the Simple Sending example above, but it is also sent as a text message, using Twilio.
+IronMQ push queues can be used to send emails. With their support for multicast, they can be used as powerful brokers. In this example, our message is sent using the Hello, SendGrid example above, but it is also sent as a text message, using Twilio.
 
-### Github Notifications
+### [Github Notifications](./github)
 
 Github offers email notifications, but offers no way to filter them. This example shows a very basic way to filter Github notifications to get only a subset of those emails, using the Github callbacks and SendGrid.
 
-### Processor Example
+### [Markov Bot](./markov)
 
-Email is a ubiquitous interface; everyone has an email address. This example is a very basic email verification system that shows how to use SendGrid&apos;s webhook support and queues to create a scalable, flexible processing system that gathers input through emails.
+Email is a ubiquitous interface; everyone has an email address. This example is a very basic email bot that uses a Markov algorithm to guess the next word in a sentence that is emailed to it. It uses SendGrid's webhook support and IronWorker's webhook endpoints to make a bot that is around when it's being talked to, and gone when nobody talks to it.
